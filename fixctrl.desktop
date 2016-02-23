@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/fish -c fixctrl
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name=fixctrl
+Comment=remap ctrl/caps
