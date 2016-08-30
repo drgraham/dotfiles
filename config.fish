@@ -5,9 +5,8 @@ set -x VISUAL vim
 set -x TERM xterm
 set -x GTK_IM_MODULE xim
 set -x QT_IM_MODULE xim
-set -x GOPATH $HOME/.local/go
 
-set PATH $PATH $HOME/.local/bin $GOPATH/bin
+set PATH $PATH $HOME/.local/bin
 
 alias vi="vim"
 alias xfterm="xfce4-terminal"
