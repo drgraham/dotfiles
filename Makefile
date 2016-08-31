@@ -25,7 +25,7 @@ programs:
 
 fonts:
 	# http://www.blambot.com/font_backissues.shtml
-	wget -nc -P /tmp http://www.blambot.com/fonts/backissuesbb_tt.zip
+	wget -nc -P /tmp http://www.blambot.com/_fonts/backissuesbb_tt.zip
 	# http://www.dafont.com/komika-title.font
 	wget http://dl.dafont.com/dl/?f=komika_title -O /tmp/komika_title.zip
 	# http://www.dafont.com/yikes.font
