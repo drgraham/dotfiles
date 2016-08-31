@@ -32,10 +32,10 @@ fonts:
 	wget http://dl.dafont.com/dl/?f=yikes -O /tmp/yikes.zip
 	# http://www.impallari.com/projects/update/85
 	wget -nc -P /tmp http://www.impallari.com/media/uploads/prosources/update-85-source.zip
-	unzip -f /tmp/backissuesbb_tt.zip -d /tmp
-	unzip -f /tmp/komika_title.zip -d /tmp
-	unzip -f /tmp/yikes.zip -d /tmp
-	unzip -f /tmp/update-85-source.zip -d /tmp
+	unzip -o /tmp/backissuesbb_tt.zip -d /tmp
+	unzip -o /tmp/komika_title.zip -d /tmp
+	unzip -o /tmp/yikes.zip -d /tmp
+	unzip -o /tmp/update-85-source.zip -d /tmp
 	cp /tmp/*.ttf $(HOME)/.fonts/
 	cp /tmp/*.TTF $(HOME)/.fonts/
 	cp /tmp/Domine-v1.0/*.ttf $(HOME)/.fonts/
