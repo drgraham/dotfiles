@@ -1,5 +1,5 @@
 [Configuration]
-MiscAlwaysShowTabs=FALSE
+MiscAlwaysShowTabs=TRUE
 MiscBell=FALSE
 MiscBordersDefault=TRUE
 MiscCursorBlinks=FALSE
@@ -17,4 +17,6 @@ MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 DropdownToggleFocus=FALSE
 DropdownKeepOpenDefault=TRUE
+MiscMiddleClickOpensUri=FALSE
+DropdownStatusIcon=FALSE
 
