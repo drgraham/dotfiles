@@ -51,7 +51,7 @@ gnomeconf:
 	dconf write /org/gnome/desktop/background/picture-uri "'file://"$(HOME)"/Pictures/PIA02991.png'"
 	dconf write /org/gnome/desktop/background/picture-options "'zoom'"
 	dconf write /org/gnome/desktop/wm/preferences/focus-mode "'sloppy'"
-	dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'xfce4-terminal.desktop', 'firefox.desktop', 'google-chrome.desktop', 'mousepad.desktop']"
+	dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'xfce4-terminal.desktop', 'firefox.desktop', 'google-chrome.desktop', 'mousepad.desktop', 'keepassx2.desktop']"
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'terminal'"
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'xfce4-terminal --drop-down'"
