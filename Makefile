@@ -63,3 +63,4 @@ gnomeconf:
 	dconf write /org/gnome/desktop/privacy/report-technical-problems "false"
 	dconf write /org/gnome/desktop/privacy/send-software-usage-stats "false"
 	dconf write /org/gnome/desktop/input-sources/xkb-options "['compose:ralt']"
+	dconf write /org/gnome/software/download-updates "false"
