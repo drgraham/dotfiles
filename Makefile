@@ -18,9 +18,6 @@ programs:
 	cp frun $(HOME)/.local/bin/
 	wget -nc -P $(HOME)/.local/bin https://yt-dl.org/downloads/latest/youtube-dl
 	chmod 755 $(HOME)/.local/bin/youtube-dl
-	wget -nc https://github.com/masmu/pulseaudio-dlna/raw/master/samples/images/application.png -O $(HOME)/.local/share/icons/pulseaudio-dlna.png
-	cp pulseaudio-dlna.desktop $(HOME)/.local/share/applications/
-	printf "Icon=$(HOME)/.local/share/icons/pulseaudio-dlna.png\n" >> $(HOME)/.local/share/applications/pulseaudio-dlna.desktop
 	cp firefox.stub $(HOME)/.local/share/applications/
 	fish -c "ffupdate"
 	git clone https://github.com/drgraham/crosspoint.git /tmp/crosspoint

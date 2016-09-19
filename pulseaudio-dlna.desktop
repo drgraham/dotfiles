@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=pulseaudio-dlna
-GenericName=Streaming Server
-Comment=Chromecast support for PulseAudio
-Terminal=false
-Type=Application
-Categories=Audio;Network;
-Exec=pulseaudio-dlna
