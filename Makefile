@@ -7,6 +7,7 @@ dirs:
 	mkdir -p $(HOME)/.local/share/applications
 	mkdir -p $(HOME)/.fonts
 	mkdir -p $(HOME)/Pictures
+	mkdir -P $(HOME)/GDrive
 
 fish:
 	cp config.fish $(HOME)/.config/fish/
@@ -20,6 +21,7 @@ programs:
 	chmod 755 $(HOME)/.local/bin/youtube-dl
 	cp firefox.stub $(HOME)/.local/share/applications/
 	fish -c "ffupdate"
+	fish -c "go get -v -u github.com/odeke-em/drive/cmd/drive"
 	git clone https://github.com/drgraham/crosspoint.git /tmp/crosspoint
 	$(MAKE) -C /tmp/crosspoint
 
