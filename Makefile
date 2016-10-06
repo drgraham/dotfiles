@@ -5,9 +5,9 @@ dirs:
 	mkdir -p $(HOME)/.config/xfce4/terminal
 	mkdir -p $(HOME)/.local/bin
 	mkdir -p $(HOME)/.local/share/applications
-	mkdir -p $(HOME)/.fonts
+	mkdir -p $(HOME)/.local/share/fonts
 	mkdir -p $(HOME)/Pictures
-	mkdir -P $(HOME)/GDrive
+	mkdir -p $(HOME)/GDrive
 
 fish:
 	cp config.fish $(HOME)/.config/fish/
@@ -34,13 +34,19 @@ fonts:
 	wget http://dl.dafont.com/dl/?f=yikes -O /tmp/yikes.zip
 	# http://www.impallari.com/projects/update/85
 	wget -nc -P /tmp http://www.impallari.com/media/uploads/prosources/update-85-source.zip
+	# http://www.shyfoundry.com/fonts/shareware/sfvipersqu.html
+	wget -nc -P /tmp http://www.shyfoundry.com/fonts/download/win/sfvipersqu.zip
+	# https://www.behance.net/gallery/31261857/LAZER-84-Free-Font
+	wget -nc -P /tmp http://sunrise-digital.net/Lazer84.ttf
 	unzip -o /tmp/backissuesbb_tt.zip -d /tmp
 	unzip -o /tmp/komika_title.zip -d /tmp
 	unzip -o /tmp/yikes.zip -d /tmp
 	unzip -o /tmp/update-85-source.zip -d /tmp
-	cp /tmp/*.ttf $(HOME)/.fonts/
-	cp /tmp/*.TTF $(HOME)/.fonts/
-	cp /tmp/Domine-v1.0/*.ttf $(HOME)/.fonts/
+	unzip -o /tmp/sfvipersqu.zip -d /tmp
+	cp /tmp/*.ttf $(HOME)/.local/share/fonts/
+	cp /tmp/*.TTF $(HOME)/.local/share/fonts/
+	cp /tmp/Domine-v1.0/*.ttf $(HOME)/.local/share/fonts/
+	cp /tmp/TrueType/*.ttf $(HOME)/.local/share/fonts/
 	fish -c "fontupdate"
 
 rc:
