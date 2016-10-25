@@ -4,6 +4,7 @@ set -x EDITOR nvim
 set -x VISUAL nvim
 set -x TERM xterm
 set -x PAGER most
+set -x MANPAGER most
 set -x DE gnome
 set -x BROWSER $HOME/.local/firefox/firefox
 set -x GTK_IM_MODULE xim
