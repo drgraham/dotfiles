@@ -50,7 +50,6 @@ fonts:
 	fish -c "fontupdate"
 
 rc:
-	cp vimrc $(HOME)/.vimrc
 	cp terminalrc $(HOME)/.config/xfce4/terminal/
 
 gnomeconf:
