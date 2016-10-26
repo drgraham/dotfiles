@@ -2,7 +2,7 @@ all: dirs fish programs fonts rc gnomeconf
 
 dirs:
 	mkdir -p $(HOME)/.config/fish/functions
-	mkdir -p $(HOME)/.config/xfce4/terminal
+	mkdir -p $(HOME)/.config/roxterm.sourceforge.net/Profiles/Default
 	mkdir -p $(HOME)/.local/bin
 	mkdir -p $(HOME)/.local/share/applications
 	mkdir -p $(HOME)/.local/share/fonts
@@ -50,7 +50,8 @@ fonts:
 	fish -c "fontupdate"
 
 rc:
-	cp terminalrc $(HOME)/.config/xfce4/terminal/
+	cp Global $(HOME)/.config/roxterm.sourceforge.net/
+	cp Default $(HOME)/.config/roxterm.sourceforge.net/Profiles/
 
 gnomeconf:
 	wget -nc -P $(HOME)/Pictures http://photojournal.jpl.nasa.gov/tiff/PIA02991.tif
