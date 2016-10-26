@@ -2,7 +2,7 @@ all: dirs fish programs fonts rc gnomeconf
 
 dirs:
 	mkdir -p $(HOME)/.config/fish/functions
-	mkdir -p $(HOME)/.config/roxterm.sourceforge.net/Profiles/Default
+	mkdir -p $(HOME)/.config/roxterm.sourceforge.net/Profiles
 	mkdir -p $(HOME)/.local/bin
 	mkdir -p $(HOME)/.local/share/applications
 	mkdir -p $(HOME)/.local/share/fonts
