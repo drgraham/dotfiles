@@ -52,6 +52,7 @@ fonts:
 rc:
 	cp Global $(HOME)/.config/roxterm.sourceforge.net/
 	cp Default $(HOME)/.config/roxterm.sourceforge.net/Profiles/
+	cp tmux.conf $(HOME)/.tmux.conf
 
 gnomeconf:
 	wget -nc -P $(HOME)/Pictures http://photojournal.jpl.nasa.gov/tiff/PIA02991.tif

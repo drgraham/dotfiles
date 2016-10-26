@@ -2,7 +2,6 @@ set -e fish_greeting
 
 set -x EDITOR nvim
 set -x VISUAL nvim
-set -x TERM xterm
 set -x PAGER most
 set -x MANPAGER most
 set -x DE gnome
@@ -13,4 +12,6 @@ set -x GOPATH $HOME/.local/go
 
 set PATH $PATH $HOME/.local/bin $GOPATH/bin
 
-alias xfterm="xfce4-terminal"
+[ $COLORTERM ]
+and [ $TERM != "screen-256color" ]
+and set -x TERM xterm-256color
