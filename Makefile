@@ -2,7 +2,6 @@ all: dirs fish programs fonts rc gnomeconf
 
 dirs:
 	mkdir -p $(HOME)/.config/fish/functions
-	mkdir -p $(HOME)/.config/roxterm.sourceforge.net/Profiles
 	mkdir -p $(HOME)/.local/bin
 	mkdir -p $(HOME)/.local/share/applications
 	mkdir -p $(HOME)/.local/share/fonts
@@ -50,8 +49,6 @@ fonts:
 	fish -c "fontupdate"
 
 rc:
-	cp Global $(HOME)/.config/roxterm.sourceforge.net/
-	cp Default $(HOME)/.config/roxterm.sourceforge.net/Profiles/
 	cp tmux.conf $(HOME)/.tmux.conf
 
 gnomeconf:
