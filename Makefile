@@ -2,6 +2,7 @@ all: dirs fish programs fonts rc gnomeconf
 
 dirs:
 	mkdir -p $(HOME)/.config/fish/functions
+	mkdir -p $(HOME)/.config/terminology/config/standard
 	mkdir -p $(HOME)/.local/bin
 	mkdir -p $(HOME)/.local/share/applications
 	mkdir -p $(HOME)/.local/share/fonts
@@ -50,6 +51,7 @@ fonts:
 
 rc:
 	cp tmux.conf $(HOME)/.tmux.conf
+	cp base.cfg $(HOME)/.config/terminology/config/standard/
 
 gnomeconf:
 	wget -nc -P $(HOME)/Pictures http://photojournal.jpl.nasa.gov/tiff/PIA02991.tif
@@ -57,7 +59,7 @@ gnomeconf:
 	dconf write /org/gnome/desktop/background/picture-uri "'file://"$(HOME)"/Pictures/PIA02991.png'"
 	dconf write /org/gnome/desktop/background/picture-options "'zoom'"
 	dconf write /org/gnome/desktop/wm/preferences/focus-mode "'sloppy'"
-	dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'firefox.desktop', 'google-chrome.desktop', 'mousepad.desktop', 'keepassx2.desktop']"
+	dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'terminology.desktop', 'firefox.desktop', 'google-chrome.desktop', 'mousepad.desktop', 'keepassx2.desktop']"
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'terminal'"
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'xfce4-terminal --drop-down'"
