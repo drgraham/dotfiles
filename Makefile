@@ -16,7 +16,6 @@ fish:
 	cp padump.fish $(HOME)/.config/fish/functions/
 
 programs:
-	cp frun $(HOME)/.local/bin/
 	wget -nc -P $(HOME)/.local/bin https://yt-dl.org/downloads/latest/youtube-dl
 	chmod 755 $(HOME)/.local/bin/youtube-dl
 	cp firefox.stub $(HOME)/.local/share/applications/
