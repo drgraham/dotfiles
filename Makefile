@@ -2,6 +2,7 @@ all: dirs fish programs fonts rc gnomeconf
 
 dirs:
 	mkdir -p $(HOME)/.config/fish/functions
+	mkdir -p $(HOME)/.config/ranger
 	mkdir -p $(HOME)/.config/terminology/config/standard
 	mkdir -p $(HOME)/.local/bin
 	mkdir -p $(HOME)/.local/share/applications
@@ -16,6 +17,7 @@ fish:
 	cp padump.fish $(HOME)/.config/fish/functions/
 
 programs:
+	printf "set preview_images true\n" > $(HOME)/.config/ranger/rc.conf
 	wget -nc -P $(HOME)/.local/bin https://yt-dl.org/downloads/latest/youtube-dl
 	chmod 755 $(HOME)/.local/bin/youtube-dl
 	cp firefox.stub $(HOME)/.local/share/applications/
