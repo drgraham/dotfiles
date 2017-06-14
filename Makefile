@@ -26,8 +26,6 @@ programs:
 	unzip -o /tmp/platform-tools-latest-linux.zip -d $(HOME)/.local
 	ln -sf $(HOME)/.local/platform-tools/adb $(HOME)/.local/bin/adb
 	fish -c "go get -v -u github.com/odeke-em/drive/cmd/drive"
-	git clone https://github.com/drgraham/crosspoint.git /tmp/crosspoint
-	$(MAKE) -C /tmp/crosspoint
 
 fonts:
 	# http://www.blambot.com/font_backissues.shtml
