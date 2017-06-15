@@ -53,6 +53,7 @@ fonts:
 rc:
 	cp tmux.conf $(HOME)/.tmux.conf
 	dconf write /com/gexperts/Tilix/focus-follow-mouse "true"
+	dconf write /com/gexperts/Tilix/control-click-titlebar "true"
 
 gnomeconf:
 	wget -nc -P $(HOME)/Pictures http://photojournal.jpl.nasa.gov/tiff/PIA02991.tif
