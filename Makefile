@@ -61,7 +61,7 @@ gnomeconf:
 	dconf write /org/gnome/desktop/background/picture-uri "'file://"$(HOME)"/Pictures/PIA02991.png'"
 	dconf write /org/gnome/desktop/background/picture-options "'zoom'"
 	dconf write /org/gnome/desktop/wm/preferences/focus-mode "'sloppy'"
-	dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'firefox.desktop', 'google-chrome.desktop', 'mousepad.desktop', 'keepassx2.desktop']"
+	dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'firefox.desktop', 'google-chrome.desktop', 'mousepad.desktop', 'keepassxc.desktop']"
 	dconf write /org/gnome/system/location/enabled "false"
 	dconf write /org/gnome/desktop/privacy/old-files-age "uint32 1"
 	dconf write /org/gnome/desktop/privacy/remove-old-temp-files "true"
