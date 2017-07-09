@@ -52,6 +52,7 @@ fonts:
 
 rc:
 	cp tmux.conf $(HOME)/.tmux.conf
+	cp mostrc $(HOME)/.mostrc
 	dconf write /com/gexperts/Tilix/focus-follow-mouse "true"
 	dconf write /com/gexperts/Tilix/control-click-titlebar "true"
 

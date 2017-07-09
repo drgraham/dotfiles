@@ -1,0 +1,4 @@
+setkey "up" "k"
+setkey "down" "j"
+setkey "column_left" "h"
+setkey "column_right" "l"
