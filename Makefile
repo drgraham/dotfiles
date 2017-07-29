@@ -71,3 +71,4 @@ gnomeconf:
 	dconf write /org/gnome/desktop/privacy/send-software-usage-stats "false"
 	dconf write /org/gnome/desktop/input-sources/xkb-options "['compose:ralt']"
 	dconf write /org/gnome/software/download-updates "false"
+	dconf write /org/gnome/settings-daemon/plugins/color/night-light-enabled "true"
