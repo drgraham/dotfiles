@@ -1,0 +1,20 @@
+#!/usr/bin/fish
+
+set GEM_HOME $HOME/.local/gems
+set GEM_SPEC_CACHE $GEM_HOME/specs
+gem install r10k
+
+mkdir -p $HOME/.puppet/r10k
+set R10KYAML $HOME/.puppet/r10k/r10k.yaml
+printf ":cachedir: $HOME/.puppet/cache/r10k\n" > $R10KYAML
+printf ":sources:\n" >> $R10KYAML
+printf "  :dotfiles:\n" >> $R10KYAML
+printf "    remote: https://github.com/drgraham/dotfiles.git\n" >> $R10KYAML
+printf "    basedir: $HOME/.puppet/code/environments\n" >> $R10KYAML
+
+set PATH $PATH $HOME/.local/gems/bin
+r10k deploy environment -c $R10KYAML -pv info master
+
+pushd $HOME/.puppet/code/environments/master
+puppet apply --environment master --modulepath modules:site manifests/site.pp
+popd
