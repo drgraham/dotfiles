@@ -9,8 +9,10 @@ set -x BROWSER $HOME/.local/firefox/firefox
 set -x GTK_IM_MODULE xim
 set -x QT_IM_MODULE xim
 set -x GOPATH $HOME/.local/go
+set -x GEM_HOME $HOME/.local/gems
+set -x GEM_SPEC_CACHE $GEM_HOME/specs
 
-set PATH $PATH $HOME/.local/bin $GOPATH/bin
+set PATH $PATH $HOME/.local/bin $GOPATH/bin $GEM_HOME/bin
 
 [ $COLORTERM ]
 and [ $TERM != "screen-256color" ]
