@@ -1,3 +1,4 @@
+Exec { path => '/usr/bin:/bin', }
 File {
   owner  => $::id,
   group  => $::gid,
