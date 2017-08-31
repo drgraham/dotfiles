@@ -1,6 +1,7 @@
 # Dotfile setup
 class role::dotfiles {
 
+  include profile::adb
   include profile::base
   include profile::fish
   include profile::most
