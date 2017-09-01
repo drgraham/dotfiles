@@ -37,4 +37,9 @@ class profile::base {
     require => Archive["/home/${::id}/Pictures/PIA02991.tif"],
   }
 
+  exec { 'xdg-forceupdate':
+    command     => 'xdg-desktop-menu forceupdate',
+    refreshonly => true,
+  }
+
 }

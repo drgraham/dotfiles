@@ -5,10 +5,4 @@ function ffupdate --description 'Update Firefox in ~/.local'
 	wget -nc --no-check-certificate -P /tmp $bz2
 	and tar jxvf /tmp/firefox-*.tar.bz2 -C /tmp
 	and rsync -av --delete-after /tmp/firefox ~/.local
-	pushd ~/.local/share/applications/
-	cp firefox.stub firefox.desktop
-	printf "Exec=$HOME/.local/firefox/firefox %%u\n" >> firefox.desktop
-	printf "Icon=$HOME/.local/firefox/browser/icons/mozicon128.png\n" >> firefox.desktop
-	popd
-	xdg-desktop-menu forceupdate
 end
