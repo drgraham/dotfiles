@@ -26,6 +26,7 @@ class profile::base {
     ensure  => present,
     extract => false,
     source  => 'http://photojournal.jpl.nasa.gov/tiff/PIA02991.tif',
+    cleanup => false,
     require => File["/home/$::id/Pictures"],
   }
 

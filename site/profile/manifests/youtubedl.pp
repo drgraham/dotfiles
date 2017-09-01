@@ -5,6 +5,7 @@ class profile::youtubedl {
     ensure  => present,
     extract => false,
     source  => 'https://yt-dl.org/downloads/latest/youtube-dl',
+    cleanup => false,
     require => File["/home/$::id/.local/bin"],
   }
 
