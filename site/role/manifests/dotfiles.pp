@@ -3,6 +3,7 @@ class role::dotfiles {
 
   include profile::adb
   include profile::base
+  include profile::drive
   include profile::firefox
   include profile::fish
   include profile::fonts
