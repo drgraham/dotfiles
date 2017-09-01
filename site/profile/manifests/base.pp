@@ -44,7 +44,7 @@ class profile::base {
   }
 
   file { "/home/${::id}/Pictures/grid-mountains-2.png":
-    source => '/tmp/neon-84/wallpaper/grid-mountains-2.png',
+    source  => '/tmp/neon-84/wallpaper/grid-mountains-2.png',
     require => [
       File["/home/${::id}/Pictures"],
       Vcsrepo['/tmp/neon-84'],

@@ -8,6 +8,7 @@ class role::dotfiles {
   include profile::fish
   include profile::fonts
   include profile::most
+  include profile::mpv
   include profile::ranger
   include profile::tmux
   include profile::youtubedl
