@@ -22,10 +22,10 @@ class profile::base {
     mode   => '0755',
   }
 
-  exec { 'PIA02991.tif':
-    command =>
-      "wget -nc -P /home/$::id/Pictures http://photojournal.jpl.nasa.gov/tiff/PIA02991.tif",
-    creates => "/home/$::id/Pictures/PIA02991.tif",
+  archive { "/home/$::id/Pictures/PIA02991.tif":
+    ensure  => present,
+    extract => false,
+    source  => 'http://photojournal.jpl.nasa.gov/tiff/PIA02991.tif',
     require => File["/home/$::id/Pictures"],
   }
 
@@ -33,7 +33,7 @@ class profile::base {
     command =>
       "convert /home/$::id/Pictures/PIA02991.tif /home/$::id/Pictures/PIA02991.png",
     creates => "/home/$::id/Pictures/PIA02991.png",
-    require => Exec['PIA02991.tif'],
+    require => Archive["/home/$::id/Pictures/PIA02991.tif"],
   }
 
 }

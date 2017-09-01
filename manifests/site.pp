@@ -1,3 +1,4 @@
+Archive { cleanup => false, }
 Exec { path => '/usr/bin:/bin', }
 File {
   owner  => $::id,
