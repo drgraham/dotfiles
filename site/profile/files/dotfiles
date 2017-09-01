@@ -16,5 +16,5 @@ set PATH $PATH $HOME/.local/gems/bin
 r10k deploy environment -c $R10KYAML -pv info master
 
 pushd $HOME/.puppet/code/environments/master
-puppet apply --environment master --modulepath modules:site manifests/site.pp
+puppet apply -t --environment master --modulepath modules:site manifests/site.pp
 popd
