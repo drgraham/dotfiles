@@ -37,6 +37,20 @@ class profile::base {
     require => Archive["/home/${::id}/Pictures/PIA02991.tif"],
   }
 
+  vcsrepo { '/tmp/neon-84':
+    ensure   => present,
+    provider => git,
+    source   => 'https://github.com/jayk/neon-84.git',
+  }
+
+  file { "/home/${::id}/Pictures/grid-mountains-2.png":
+    source => '/tmp/neon-84/wallpaper/grid-mountains-2.png',
+    require => [
+      File["/home/${::id}/Pictures"],
+      Vcsrepo['/tmp/neon-84'],
+    ],
+  }
+
   exec { 'xdg-forceupdate':
     command     => 'xdg-desktop-menu forceupdate',
     refreshonly => true,
