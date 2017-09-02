@@ -7,6 +7,7 @@ class role::dotfiles {
   include profile::firefox
   include profile::fish
   include profile::fonts
+  include profile::gnome
   include profile::most
   include profile::mpv
   include profile::ranger
