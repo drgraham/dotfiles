@@ -10,6 +10,7 @@ class role::dotfiles {
   include profile::most
   include profile::mpv
   include profile::ranger
+  include profile::tilix
   include profile::tmux
   include profile::youtubedl
 
