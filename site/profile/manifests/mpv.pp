@@ -32,4 +32,20 @@ class profile::mpv {
     require => File["/home/${::id}/.config/mpv"],
   }
 
+  Ini_setting {
+    ensure            => present,
+    key_val_separator => '=',
+    path              => "/home/${::id}/.config/mpv/mpv.conf",
+    section           => 'default',
+    require           => File["/home/${::id}/.config/mpv"],
+  }
+
+  ini_setting {
+
+    'mpv-screenshot-format':
+      setting => 'screenshot-format',
+      value   => 'png',;
+
+  }
+
 }
