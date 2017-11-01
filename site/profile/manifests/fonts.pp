@@ -73,7 +73,7 @@ class profile::fonts {
     extract => false,
     source  => 'http://sunrise-digital.net/Lazer84.ttf',
     cleanup => false,
-    notify  => Exec['fontupdate'],
+    notify  => Exec['copyfonts'],
   }
 
   exec { 'copyfonts':
