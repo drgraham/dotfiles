@@ -17,6 +17,12 @@ class profile::fish {
     require => File["/home/${::id}/.config/fish/functions"],
   }
 
+  file { "/home/${::id}/.config/fish/functions/fish_prompt.fish":
+    ensure  => file,
+    source  => 'puppet:///modules/profile/fish_prompt.fish',
+    require => File["/home/${::id}/.config/fish/functions"],
+  }
+
   file { "/home/${::id}/.config/fish/functions/fontupdate.fish":
     ensure  => file,
     source  => 'puppet:///modules/profile/fontupdate.fish',
