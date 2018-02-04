@@ -30,21 +30,30 @@ class profile::fonts {
     notify  => Exec['copyfonts'],
   }
 
-  # http://www.dafont.com/komika-title.font
+  # https://www.dafont.com/komika-title.font
   archive { '/tmp/komika_title.zip':
     ensure  => present,
     extract => true,
-    source  => 'http://dl.dafont.com/dl/?f=komika_title',
+    source  => 'https://dl.dafont.com/dl/?f=komika_title',
     creates => '/tmp/fonts/KOMTITTL.ttf',
     notify  => Exec['copyfonts'],
   }
 
-  # http://www.dafont.com/yikes.font
+  # https://www.dafont.com/yikes.font
   archive { '/tmp/yikes.zip':
     ensure  => present,
     extract => true,
-    source  => 'http://dl.dafont.com/dl/?f=yikes',
+    source  => 'https://dl.dafont.com/dl/?f=yikes',
     creates => '/tmp/fonts/YIKES!__.TTF',
+    notify  => Exec['copyfonts'],
+  }
+
+  # https://www.dafont.com/fakehieroglyphs.font
+  archive { '/tmp/fakehieroglyphs.zip':
+    ensure  => present,
+    extract => true,
+    source  => 'https://dl.dafont.com/dl/?f=fakehieroglyphs',
+    creates => '/tmp/fonts/FakeGlyph.otf',
     notify  => Exec['copyfonts'],
   }
 
@@ -78,7 +87,7 @@ class profile::fonts {
 
   exec { 'copyfonts':
     command     =>
-      "find /tmp/fonts -iname '*.ttf' -exec cp {} ${fontdir} \\; 2>/dev/null",
+      "find /tmp/fonts \( -iname '*.ttf' -o -iname '*.otf' \) -exec cp {} ${fontdir} \\; 2>/dev/null",
     refreshonly => true,
     notify      => Exec['fontupdate'],
   }
