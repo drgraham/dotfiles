@@ -6,6 +6,11 @@ class profile::neovim {
     mode   => '0755',
   }
 
+  file { "/home/${::id}/.config/nvim/init.vim":
+    source  => 'puppet:///modules/profile/init.vim',
+    require => File["/home/${::id}/.config/nvim"],
+  }
+
   archive { '/tmp/HEAD.tar.gz':
     ensure          => present,
     extract         => true,
