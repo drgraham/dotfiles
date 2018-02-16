@@ -17,6 +17,11 @@ class profile::base {
     require => File["/home/${::id}/.local/share"],
   }
 
+  file { "/home/${::id}/Development":
+    ensure => directory,
+    mode   => '0755',
+  }
+
   file { "/home/${::id}/Pictures":
     ensure => directory,
     mode   => '0755',

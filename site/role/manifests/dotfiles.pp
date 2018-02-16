@@ -12,6 +12,7 @@ class role::dotfiles {
   include profile::mpv
   include profile::neovim
   include profile::ranger
+  include profile::rpm
   include profile::tilix
   include profile::tmux
   include profile::youtubedl
