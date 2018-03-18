@@ -71,7 +71,8 @@ class profile::firefox {
 
     'ff-icon':
       setting => 'Icon',
-      value   => "/home/${::id}/.local/firefox/browser/icons/mozicon128.png",;
+      value   =>
+        "/home/${::id}/.local/firefox/browser/chrome/icons/default/default128.png",;
 
   }
 
