@@ -58,12 +58,12 @@ class profile::fonts {
   }
 
   # http://www.impallari.com/projects/update/85
-  archive { '/tmp/update-85-source.zip':
+  archive { "${fontdir}/Domine.zip":
     ensure  => present,
     extract => true,
     source  =>
-      'http://www.impallari.com/media/uploads/prosources/update-85-source.zip',
-    creates => '/tmp/fonts/Domine-v1.0/Domine-Regular.ttf',
+      'https://fonts.google.com/download?family=Domine',
+    creates => '/tmp/fonts/Domine-Regular.ttf',
     notify  => Exec['copyfonts'],
   }
 
