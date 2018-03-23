@@ -19,7 +19,7 @@ class profile::mpv {
   }
 
   file { "/home/${::id}/.config/mpv/scripts/quick-scale.lua":
-    source  => '/tmp/mpv-tools/quick-scale.lua',
+    source  => '/tmp/mpv-tools/scripts/quick-scale.lua',
     require => [
       File["/home/${::id}/.config/mpv/scripts"],
       Vcsrepo['/tmp/mpv-tools'],
