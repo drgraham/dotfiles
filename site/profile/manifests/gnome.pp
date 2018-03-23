@@ -1,7 +1,7 @@
 # Configure GNOME
 class profile::gnome {
 
-  $favorites = "['org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'firefox.desktop', 'google-chrome.desktop', 'mousepad.desktop', 'keepassxc.desktop']"
+  $favorites = "['org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'firefox.desktop', 'google-chrome.desktop', 'mousepad.desktop', 'org.keepassxc.KeePassXC.desktop']"
 
   profile::dconfwrite { '/org/gnome/desktop/background/picture-uri':
     value => "'file:///home/${::id}/Pictures/PIA02991.png'",
